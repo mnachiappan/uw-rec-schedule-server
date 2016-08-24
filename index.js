@@ -11,3 +11,9 @@ app.listen((3000));
 app.get('/', function (req, res) {
     res.send('This is TestBot Server');
 });
+
+app.get('/schedule/activity/:activity', function(req, res) {
+    var result = [{activity:req.params.activity, startTime: "8:00 AM", endTime: "12:00 PM", date: "2016/09/23"},
+                {activity:req.params.activity, startTime: "8:00 AM", endTime: "12:00 PM", date: "2016/09/25"}];
+    res.send(result);
+});
