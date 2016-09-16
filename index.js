@@ -7,9 +7,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.listen((3000));
 
+app.use(express.static('public'));
+
 // Server frontpage
 app.get('/', function (req, res) {
-    res.send('This is TestBot Server');
+    res.send('This is TestBot Servicjkls');
 });
 
 app.get('/schedule/activity/:activity', function(req, res) {
