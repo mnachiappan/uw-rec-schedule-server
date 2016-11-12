@@ -31,7 +31,7 @@ for url in urls:
 
 rec_results = filter(lambda result: result and result["name"] and "Rec" in result["name"], results)
 def parse_activity(activity):
-	activities = ["basketball", "swim", "badminton", "soccer", "multi", "volleyball", "studio"]
+	activities = ["basketball", "swim", "badminton", "soccer", "multi", "volleyball", "studio", "open"]
 	for a in activities:
 		if a in activity["name"].lower():
 			newobj = copy.copy(activity)
